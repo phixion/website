@@ -1,2 +1,0 @@
-# website
-static website

@@ -1,0 +1,7 @@
+{% if build.isProd %}
+  <script async src="https://rum.cronitor.io/script.js"></script>
+  <script>
+    window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+    cronitor('config', { clientKey: '4231ba874286b8082fc61b7df727cf21' });
+  </script>
+{% endif %}

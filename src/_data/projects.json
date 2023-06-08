@@ -1,0 +1,51 @@
+{
+  "opensource": [
+    {
+      "url": "https://github.com/phixion/website",
+      "name": "phixion",
+      "description": "this website"
+    },
+    {
+      "url": "https://github.com/phixion/hubgrabber-dockerized",
+      "name": "hubgrabber-dockerized",
+      "description": "dockerhubGraber is a tool developed in Python3 to monitor dockerhub to search and find sensitive data for various online services. such as: Github, Amazon (AWS), Mailgun, Discord, Twitter, Heroku, Stripe, Twilio..."
+    },
+    {
+      "url": "https://github.com/phixion/sharex-bb2cf",
+      "name": "sharex-bb2cf",
+      "description": "empower your sharex with the help of storagebuckets from backblaze and edge-workers in the the cloudflare cdn"
+    },
+    {
+      "url": "https://github.com/phixion/sopel-modules",
+      "name": "sopel-modules",
+      "description": "my modules for sopel IRC bot"
+    },
+    {
+      "url": "https://github.com/phixion/steamkey-scanbot",
+      "name": "steamkey-scanbot",
+      "description": "POC that scans list of subreddits for steamkeys and puts them in a txtfile"
+    },
+    {
+      "url": "https://github.com/phixion/plex-cloudflare-nginx-reverseproxy",
+      "name": "plex-cloudflare-nginx-reverseproxy",
+      "description": "serving plex using nginx over cloudflare"
+    },
+    {
+      "url": "https://github.com/phixion/arch_steinberg_ur44_patch",
+      "name": "arch_steinberg_ur44_patch",
+      "description": "Kernel Patch for the Steinberg UR44 USB Audio Interface to work with Archlinux."
+    }
+  ],
+  "sites": [
+    {
+      "url": "https://github.com/phixion/phixion",
+      "name": "phixion.org",
+      "description": "this website"
+    },
+    {
+      "url": "https://cv.chaot.dev",
+      "name": "CV",
+      "description": "my CV"
+    }
+  ]
+}

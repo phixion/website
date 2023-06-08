@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>martin's playlists</title>
+  <link href="https://phixion.org/playlists.xml" rel="self"/>
+  <link href="https://phixion.org"/>
+  <id>https://phixion.org</id>
+  <author>
+    <name>Martin Spitz</name>
+    <email>m@rtin.ms</email>
+  </author>
+</feed>

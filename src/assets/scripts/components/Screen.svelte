@@ -1,12 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
-
-  import Volume from './Volume.svelte';
-  import Webcam from './Webcam.svelte';
-  import Video from './Video.svelte';
-  import { sendEvent } from '../modules/analytics.js';
-  import { startNoise, stopNoise } from '../modules/noise.js';
-  import { raf, timeout, body } from '../modules/utils.js';
+  import { onMount } from "svelte";
+  import Webcam from "./Webcam.svelte";
+  import Video from "./Video.svelte";
+  import { startNoise, stopNoise } from "../modules/noise.js";
+  import { raf, timeout, body } from "../modules/utils.js";
   import {
     currentChannel,
     currentChannelInfo,
@@ -14,7 +11,7 @@
     loadingChannel,
     loadingPage,
     LOADING_STATE,
-  } from '../modules/tv.js';
+  } from "../modules/tv.js";
 
   const MIN_CHANNEL_LOADING_TIME = 400;
 
@@ -25,12 +22,12 @@
   function startLoadingChannelAnimation() {
     stopLoadingChannelAnimation();
 
-    body.classList.add('loading-channel');
+    body.classList.add("loading-channel");
     channelLoadTimestamp = Date.now();
   }
 
   function stopLoadingChannelAnimation() {
-    body.classList.remove('loading-channel');
+    body.classList.remove("loading-channel");
   }
 
   function handleChannelReady() {
@@ -55,14 +52,14 @@
       $loadingChannel = LOADING_STATE.Loading;
 
       // can't wait for something that's not a video/webcam
-      if (channelInfo.type == 'unknown') {
+      if (channelInfo.type == "unknown") {
         handleChannelReady();
       }
     });
 
     sendEvent({
-      type: 'easter_egg',
-      label: 'channel_switch',
+      type: "easter_egg",
+      label: "channel_switch",
       value: channelInfo.displayName,
     });
   }
@@ -73,14 +70,14 @@
 
   $: handleChannelChange($currentChannelInfo);
 
-  $: body.setAttribute('channel', `${$currentChannel}`);
+  $: body.setAttribute("channel", `${$currentChannel}`);
 
-  $: body.classList.toggle('hide-content', !$contentVisible);
+  $: body.classList.toggle("hide-content", !$contentVisible);
 
   $: {
     body.classList.toggle(
-      'loading-page',
-      $loadingPage === LOADING_STATE.Loading,
+      "loading-page",
+      $loadingPage === LOADING_STATE.Loading
     );
   }
 
@@ -101,9 +98,9 @@
 </script>
 
 <div class="tv-videos">
-  {#if $currentChannelInfo.type === 'webcam'}
+  {#if $currentChannelInfo.type === "webcam"}
     <Webcam on:ready={handleChannelReady} />
-  {:else if $currentChannelInfo.type === 'video'}
+  {:else if $currentChannelInfo.type === "video"}
     <Video on:ready={handleChannelReady} />
   {/if}
 </div>
@@ -124,8 +121,8 @@
       height: 100%;
       object-fit: cover;
 
-      &[channel='2'],
-      &[channel='8'] {
+      &[channel="2"],
+      &[channel="8"] {
         object-position: center top;
       }
     }

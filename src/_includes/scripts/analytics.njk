@@ -1,7 +1,13 @@
 {% if build.isProd %}
-  <script async src="https://rum.cronitor.io/script.js"></script>
-  <script>
+
+<script async src="https://rum.cronitor.io/script.js"></script>
+<script>
+  {% set analytics %}
     window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
-    cronitor('config', { clientKey: '4231ba874286b8082fc61b7df727cf21' });
-  </script>
+    cronitor('config', { clientKey: '71c73b25facdea9209dc7cb3e7e89bd3' });
+    {% endset %}
+
+    {{ analytics | jsmin | safe }}
+</script>
+
 {% endif %}

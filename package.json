@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/phixion/my-website"
+    "url": "https://github.com/phixion/phixion.github.io"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

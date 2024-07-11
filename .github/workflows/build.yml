@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [19]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@latest
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@latest
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies & build
@@ -20,7 +20,7 @@ jobs:
           npm ci
           npm run build
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@latest
         with:
           publish_dir: .
           github_token: ${{ secrets.GITHUB_TOKEN }}

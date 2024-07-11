@@ -4,8 +4,4 @@ textNav:
   external: true
 ---
 
-### Skills
-
-### xperience
-
-### Education
+https://cv.chaot.dev
